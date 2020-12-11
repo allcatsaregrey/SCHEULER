@@ -1,5 +1,4 @@
-;; Generate a list of all Fibonnaci numbers of interest
-
+;; Generate Fibonnaci numbers
 (define fibonnaci
   (lambda (n)
     (let fib ([i n])
@@ -8,8 +7,8 @@
        [(eq? i 1) 1]
        [else (+ (fib (- i 1)) (fib (- i 2)))]))))
 
-;; Generate and filter even Fibonnaci numbers from list
-
+;; Generate a list of all fibonnaci numbers that aren't
+;; larger than the target
 (define gen-list
   (lambda (n)
     (let iter ([i 0])
@@ -20,5 +19,4 @@
 ;; Use apply and the + procedure to sum every element of this list
 ;; I selected 1000 as more than sufficient to reach a fib number >
 ;; 4000000
-
 (define sol (apply + (filter even? (gen-list 1000))))

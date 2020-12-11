@@ -1,3 +1,0 @@
-;; Generate a list of all Fibonnaci numbers of interest
-
-;; Use apply and the + procedure to sum every element of this list
